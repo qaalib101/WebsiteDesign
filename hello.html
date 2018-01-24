@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<button id = "add">Add items to list</button>
+<h1>A list of items</h1>
+<ul id = "my_list">
+
+</ul>
+<button id = "clear"> Clear items</button>
+<script>
+    document.getElementById("add").addEventListener("click", addToList);
+    document.getElementById("clear").addEventListener("click", clearList);
+
+    var newItemNumber = 1;
+
+    function addToList(){
+        var my_list_element = document.getElementById("my_list");
+
+
+        if(newItemNumber < 11){
+            var new_list_item = document.createElement("li");
+            new_list_item.innerHTML = "New item" + newItemNumber;
+
+            my_list_element.appendChild(new_list_item);
+
+            newItemNumber++;
+        }
+
+    }
+    function clearList(){
+        var myList = document.getElementById("my_list");
+        myList.innerHTML = "";
+        newItemNumber = 1;
+    }
+</script>
+</body>
+</html>

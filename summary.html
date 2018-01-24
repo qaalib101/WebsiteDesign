@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select By Class</title>
+</head>
+
+<body>
+
+<h1>Programming Languages</h1>
+
+<div id="language-details">
+
+    <h2>Java</h2>
+    <P><span class="language-name">Java</span> is a popular programming language.</P>
+
+    <h2>C#</h2>
+    <P>Created by Microsoft, <span class="language-name">C#</span> is a popular programming language.</P>
+
+    <h2>JavaScript</h2>
+    <P>As the saying goes, Java is to <span class="language-name">JavaScript</span> as Car is to Carpet.</P>
+
+</div>
+
+<div id="language-summary">
+
+    <h2>Languages on this page</h2>
+
+    <ul id="language-list">
+        <!--  Build this with JavaScript.
+        Will contain a list of the names Java, C# and JavaScript.-->
+    </ul>
+
+</div>
+
+<script>
+
+    var languageNames = document.getElementsByClassName("language-name");
+    var languageList = document.getElementById("language-list");
+
+    for(var x = 0;x < languageNames.length; x++){
+        var language = languageNames[x];
+        var name = language.innerHTML;
+        var listItem = document.createElement("li");
+        listItem.innerHTML = name;
+        languageList.appendChild(listItem);
+    }
+
+</script>
+
+</body>
+
+</html>
+
+
