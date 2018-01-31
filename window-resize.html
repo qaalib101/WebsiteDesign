@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resize Window</title>
+</head>
+<body>
+
+<p id="window-size"></p>
+
+<script>
+
+    var pixelSize = document.getElementById("window-size");
+    var width= window.innerWidth;
+    var height = window.innerHeight;
+    var size = width * height;
+    pixelSize.innerHTML = "Window Size= " + size;
+
+    window.addEventListener("resize", windowWasResized);
+
+    function windowWasResized() {
+
+        alert("You re-sized the window!");
+        pixelSize = document.getElementById("window-size");
+        width = window.innerWidth;
+        height = window.innerHeight;
+        size = width * height;
+        pixelSize.innerHTML = "Window Size= " + size;
+    }
+
+
+</script>
+
+</body>
+
+</html>

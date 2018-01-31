@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating Movie</title>
+</head>
+<body>
+<p>Star Wars: The Force Awakens, <span class="rating">4 stars</span></p>
+
+<p>Maze Runner, <span class="rating">5 stars</span></p>
+
+<p>The Last WitchHunter, <span class="rating">3 stars</span></p>
+
+<p>Paranormal Activity, <span class="rating">3 stars</span></p>
+<script>
+    var ratingsArray = document.getElementsByClassName("rating");
+    for(var x = 0 ;x < ratingsArray.length ; x++){
+        var rating = ratingsArray.item(x).substring(0, 1);
+        rating = rating * "\u2605";
+        ratingsArray[x].innerHTML = rating;
+    }
+</script>
+</body>
+</html>
