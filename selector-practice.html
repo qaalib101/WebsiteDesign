@@ -77,8 +77,8 @@
     var ListItems = document.querySelectorAll("li");
     var lastListItem = ListItems[ListItems.length - 1];
     var styleColor = lastListItem.style.color;
-    lastListItem.addEventListener("mouseover", changeColor());
-    lastListItem.addEventListener("mouseout", changeColor());
+    lastListItem.addEventListener("mouseover", changeColor);
+    lastListItem.addEventListener("mouseout", changeColor);
     function changeColor(){
         if(lastListItem.style.color == styleColor){
             lastListItem.style.color = "pink";
